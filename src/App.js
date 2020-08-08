@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Appbar from './Components/Appbar';
 
 function App() {
+  const [open, setOpen] = useState(false);
+  const companyName = 'Луис+, ООО';
+  const userName = 'Имя пользователя';
+  const isOnline = true;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Appbar isOpen={open} companyName={companyName} userName={userName} isOnline={isOnline} />
     </div>
   );
 }

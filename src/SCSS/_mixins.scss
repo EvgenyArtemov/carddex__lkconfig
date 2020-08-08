@@ -1,0 +1,21 @@
+@mixin font-basic {
+  font-family: 'GothamPro';
+  font-size: 1.4rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #293440;
+}
+
+@mixin font-small {
+  font-family: 'GothamPro';
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #8b9298;
+}

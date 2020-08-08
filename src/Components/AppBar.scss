@@ -1,0 +1,86 @@
+@import '../SCSS/mixins';
+
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: solid 1px #efefef;
+
+  .company__info {
+    display: flex;
+    align-items: center;
+
+    .company__info_title {
+      @include font-small;
+      margin: 0 1rem 0 10rem;
+    }
+
+    .company__info_name {
+      @include font-basic;
+    }
+  }
+
+  .user {
+    display: flex;
+    margin-left: auto;
+
+    .user__notifications {
+      display: flex;
+      position: relative;
+
+      & > img {
+        margin: 0;
+        padding-right: 4rem;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        width: 1px;
+        height: 30px;
+        background-color: #efefef;
+      }
+    }
+
+    .user__info {
+      display: flex;
+      display: flex;
+      align-items: center;
+      margin-left: 4rem;
+      position: relative;
+
+      &_name {
+        @include font-basic;
+      }
+
+      &_avatar {
+        position: relative;
+        margin: 2rem 4rem 2rem 2rem;
+
+        & > img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin: 0;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 0;
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          background-color: #1d68d9;
+          border: 2px solid white;
+        }
+      }
+    }
+  }
+}
