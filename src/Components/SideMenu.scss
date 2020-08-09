@@ -112,3 +112,28 @@
   @include icons;
   background-image: url('../img/price.svg');
 }
+
+.news::before {
+  @include icons;
+  background-image: url('../img/news.svg');
+}
+
+.archive::before {
+  @include icons;
+  background-image: url('../img/archive.svg');
+}
+
+.admin::before {
+  @include icons;
+  background-image: url('../img/admin.svg');
+}
+
+.users::before {
+  @include icons;
+  background-image: url('../img/users.svg');
+}
+
+.apps::before {
+  @include icons;
+  background-image: url('../img/apps.svg');
+}
