@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
+import './App.scss';
 import Appbar from './Components/Appbar';
+import SideMenu from './Components/SideMenu';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -11,6 +12,9 @@ function App() {
   return (
     <div className="App">
       <Appbar isOpen={open} companyName={companyName} userName={userName} isOnline={isOnline} />
+      <main>
+        <SideMenu />
+      </main>
     </div>
   );
 }

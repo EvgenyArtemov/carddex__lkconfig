@@ -1,10 +1,11 @@
 @import '../SCSS/mixins';
+@import '../SCSS/variables';
 
 header {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-  border: solid 1px #efefef;
+  border: $base-border;
 
   .company__info {
     display: flex;
@@ -42,7 +43,7 @@ header {
         transform: translate(0, -50%);
         width: 1px;
         height: 30px;
-        background-color: #efefef;
+        background-color: $gray;
       }
     }
 

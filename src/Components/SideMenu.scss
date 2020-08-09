@@ -1,0 +1,114 @@
+@import '../SCSS/mixins';
+@import '../SCSS/variables';
+
+.sidemenu {
+  padding: 0 !important;
+
+  @include font-basic;
+  margin: 2rem 2.5rem;
+  min-width: 360px;
+  margin: 0;
+  padding: 2rem;
+  height: 100vh;
+  border-right: $base-border;
+
+  &__block {
+    position: relative;
+    margin: 2rem;
+    border-radius: 10px;
+    border: $base-border;
+    background-color: $white;
+    min-width: 320px;
+    cursor: pointer;
+
+    &::after {
+      display: inline-block;
+      position: absolute;
+      top: 2.5rem;
+      right: 2rem;
+      margin-right: 2rem;
+      margin-bottom: -0.5rem;
+      content: ' ';
+      background-size: 11px 6px;
+      height: 6px;
+      width: 11px;
+      background-image: url('../img/arrow.svg');
+      transform: rotate(0);
+      transition: all 0.2s;
+    }
+
+    &.closed::after {
+      display: inline-block;
+      position: absolute;
+      top: 2.5rem;
+      right: 2rem;
+      margin-right: 2rem;
+      margin-bottom: -0.5rem;
+      content: ' ';
+      background-size: 11px 6px;
+      height: 6px;
+      width: 11px;
+      background-image: url('../img/arrow.svg');
+      transform: rotate(180deg);
+      transition: all 0.2s;
+    }
+  }
+
+  &__title {
+    padding: 2rem;
+    border-bottom: $base-border;
+
+    &.closed {
+      border-bottom: none;
+    }
+  }
+
+  &__list {
+    padding-left: 0;
+    margin: 0;
+
+    &.closed {
+      display: none;
+    }
+
+    &_item {
+      padding: 2rem 2rem 2rem 4rem;
+      list-style: none;
+
+      &:hover {
+        background-color: $gray;
+      }
+
+      &:last-child:hover {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+}
+
+//icons set for menu items '../img/home.svg'
+
+.home::before {
+  @include icons;
+  background-image: url('../img/home.svg');
+}
+
+.sales__history::before {
+  @include icons;
+  background-image: url('../img/sales.svg');
+}
+
+.payments__history::before {
+  @include icons;
+  background-image: url('../img/payments.svg');
+}
+
+.dispatch__history::before {
+  @include icons;
+  background-image: url('../img/dispatch.svg');
+}
+
+.price__list::before {
+  @include icons;
+  background-image: url('../img/price.svg');
+}
