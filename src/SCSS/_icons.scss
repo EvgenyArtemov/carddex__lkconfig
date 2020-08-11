@@ -1,0 +1,54 @@
+@import '../SCSS/mixins';
+@import '../SCSS/variables';
+
+//icons set for menu items '../img/home.svg'
+
+.home::before {
+  @include icons;
+  background-image: url('../img/home.svg');
+}
+
+.sales__history::before {
+  @include icons;
+  background-image: url('../img/sales.svg');
+}
+
+.payments__history::before {
+  @include icons;
+  background-image: url('../img/payments.svg');
+}
+
+.dispatch__history::before {
+  @include icons;
+  background-image: url('../img/dispatch.svg');
+}
+
+.price__list::before {
+  @include icons;
+  background-image: url('../img/price.svg');
+}
+
+.news::before {
+  @include icons;
+  background-image: url('../img/news.svg');
+}
+
+.archive::before {
+  @include icons;
+  background-image: url('../img/archive.svg');
+}
+
+.admin::before {
+  @include icons;
+  background-image: url('../img/admin.svg');
+}
+
+.users::before {
+  @include icons;
+  background-image: url('../img/users.svg');
+}
+
+.apps::before {
+  @include icons;
+  background-image: url('../img/apps.svg');
+}

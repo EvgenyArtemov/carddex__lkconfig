@@ -7,10 +7,14 @@ import CloseBtn from './buttons/CloseBtn';
 import MenuBtn from './buttons/MenuBtn';
 import Logotype from './Logotype/Logotype';
 
-export default function Appbar({ isOpen, companyName, userName, isOnline }) {
+export default function Appbar({ isOpen, companyName, userName, isOnline, setOpen }) {
+  const clicked = () => {
+    console.log('clicked');
+  };
+
   return (
     <header>
-      {isOpen ? <CloseBtn /> : <MenuBtn />}
+      {isOpen ? <CloseBtn onClick={() => console.log('clicked')} /> : <MenuBtn onClick={clicked} />}
       <Logotype />
 
       <div className="company__info">

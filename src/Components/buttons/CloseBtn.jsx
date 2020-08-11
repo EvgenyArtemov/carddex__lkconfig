@@ -3,5 +3,9 @@ import closeBtn from '../../img/menu_btn_close.svg';
 import './closeBtn.scss';
 
 export default function CloseBtn() {
-  return <input type="image" src={closeBtn} alt="Close Menu Button" />;
+  return (
+    <>
+      <input type="image" src={closeBtn} alt="Close Menu Button" />
+    </>
+  );
 }
